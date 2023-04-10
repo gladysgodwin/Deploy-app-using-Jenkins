@@ -12,7 +12,6 @@ pipeline {
         AWS_REGION="${'eu-west-1'}"
         DOCKER_USER="${'gladysgodwin'}"
         DOCKER_PASSWORD="${'Helper95.'}"
-        TF_API_TOKEN="${'dyjhUOj1eqZ9Sw.atlasv1.GMtrK0xDOHcINlkK1xeg25fu7f1xm0DA4mdRX7KWwWvWDnhgzfF3ZRKyn8cWjMgSHps'}"
     }
 
     stages {
