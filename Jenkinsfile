@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     dir('terraform') {
-                        sh "terraform init -backend-config="${TF_API_TOKEN}""
+                        sh "terraform init"
                         sh "terraform apply --auto-approve"
                     }
                 }
