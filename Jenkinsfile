@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 pipeline {
     agent {
-        docker {
+        any {
             image 'hashicorp/terraform:1.0.8'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
