@@ -1,13 +1,12 @@
 terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
+  cloud {
     organization = "AltSchoolProject-byGladys"
 
     workspaces {
       name = "jenkins-project"
     }
   }
-  
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
