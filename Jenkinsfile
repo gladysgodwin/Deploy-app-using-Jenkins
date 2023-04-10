@@ -1,6 +1,11 @@
 #!/usr/bin/env groovy
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'hashicorp/terraform:1.0.8'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
+    }
     environment {
         AWS_ACCESS_KEY_ID="${'Access Key ID'}"
         AWS_SECRET_ACCESS_KEY="${'Secret Access Key'}"
