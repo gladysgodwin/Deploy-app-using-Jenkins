@@ -19,7 +19,7 @@ pipeline {
                 }
             }
         }
-        stage("Test my app locally") {
+        stage("Test Backend") {
             steps {
                 script {
                     dir('my-website-portfolio/backend')
@@ -27,7 +27,8 @@ pipeline {
                 }
 
             }
-
+        }
+        stage("Test Frontend") {
             steps {
                 script {
                     dir('my-website-portfolio/frontend')
