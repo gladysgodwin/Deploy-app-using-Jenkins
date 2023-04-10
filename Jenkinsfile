@@ -2,11 +2,11 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCESS_KEY_ID=${'Access Key ID'}
-        AWS_SECRET_ACCESS_KEY=${'Secret Access Key'}
-        AWS_REGION=${'eu-west-1'}
-        DOCKER_USER=${'gladysgodwin'}
-        DOCKER_PASSWORD=${'Helper95.'}
+        AWS_ACCESS_KEY_ID="${'Access Key ID'}"
+        AWS_SECRET_ACCESS_KEY="${'Secret Access Key'}"
+        AWS_REGION="${'eu-west-1'}"
+        DOCKER_USER="${'gladysgodwin'}"
+        DOCKER_PASSWORD="${'Helper95.'}"
     }
 
     stages {
