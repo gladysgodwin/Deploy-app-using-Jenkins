@@ -13,17 +13,19 @@ pipeline {
         stage("Create EKS cluster") {
             steps {
                 script {
-                    dir('terraform')
+                    dir('terraform') {
                         sh "terraform init"
                         sh "terraform apply --auto-approve"
+                    }
                 }
             }
         }
         stage("Test Backend") {
             steps {
                 script {
-                    dir('my-website-portfolio/backend')
+                    dir('my-website-portfolio/backend') {
                         sh "npm run dev"
+                    }
                 }
 
             }
@@ -31,8 +33,9 @@ pipeline {
         stage("Test Frontend") {
             steps {
                 script {
-                    dir('my-website-portfolio/frontend')
+                    dir('my-website-portfolio/frontend') {
                         sh "npm install"
+                    }       
                 }
             }
         }
