@@ -20,5 +20,5 @@ app.post('/submit-data', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Express app listening at http://3.253.16.227:${port}`);
+  console.log(`Express app listening at http://34.251.191.7:${port}`);
 });
