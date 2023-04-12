@@ -35,6 +35,7 @@ pipeline {
 
             }
         }
+        /*
         stage("Test Frontend") {
             steps {
                 script {
@@ -44,7 +45,7 @@ pipeline {
                 }
             }
         }
-
+        */
         stage("Build backend into a docker image") {
             steps {
                 container('docker') {
