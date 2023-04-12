@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     dir('my-website-2023/backend') {
-                        sh "npm run dev &"
+                        sh "npm run dev"
                     }
                 }
 
