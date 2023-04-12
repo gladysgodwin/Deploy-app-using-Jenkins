@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     dir('my-website-2023/frontend') {
-                        sh "npm install"
+                        sh "npm install &"
                     }       
                 }
             }
