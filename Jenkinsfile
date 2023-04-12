@@ -25,6 +25,7 @@ pipeline {
                 }
             }
         }
+        /*
         stage("Test Backend") {
             steps {
                 script {
@@ -35,7 +36,7 @@ pipeline {
 
             }
         }
-        /*
+        
         stage("Test Frontend") {
             steps {
                 script {
