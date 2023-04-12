@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="nav-bar">
+                    <li><a href="index.html">HOME</a> </li>
+                    <li><a href="#about">ABOUT GLADYS</a></li>
+                    <li><a href="#projects">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT GLADYS</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i></li>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="tour">
+                <marquee>Welcome to my world</marquee>
+                <button onclick="location.href='#about'">Start a tour</button>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section>
+            <div id="theme-options-wrapper">
+                <div data-mode="light" class="theme-dot" id="light-mode"></div>
+                <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
+                <div data-mode="green" class="theme-dot" id="green-mode"></div>
+                <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
+            </div>
+            <br>
+            <br>
+            <div>
+                <h6 class="echfive">Dont like the color of your screen? Click on the circles to switch</h6>
+                <br>
+                <p id="settings-note">Choice theme will be saved for <br> next visit</p>
+            </div>
+        </section>
+        <br>
+        <section class="s2">
+            <div class="main-container">
+                <div class="about-wrapper">
+                    <div class="about-me">
+                        <article class="colr">
+                            <h2>Gladys Oviawe</h2>
+                            <hr>
+                            <p>A Cloud DevOps Engineer with experience in developing, deploying, and managing
+                                cloud-based applications and infrastructure using DevOps practices.
+                                My main responsibilities include designing and implementing automation pipelines for
+                                software deployment, configuring cloud infrastructure and services, and monitoring and
+                                troubleshooting cloud-based applications. I collaborate with development teams to ensure
+                                that code changes are deployed quickly and safely to production, while maintaining high
+                                levels of reliability, scalability, and security.
+                                I have technical background in areas such as cloud computing platforms (e.g., AWS and
+                                Google Cloud), infrastructure as code (e.g., Terraform, CloudFormation), continuous
+                                integration/continuous deployment (CI/CD) tools (e.g., Fluxcd, CircleCI),
+                                containerization technologies (e.g., Docker, Kubernetes), and scripting languages (e.g.,
+                                Python, Bash). I also possess excellent communication skills and be able to work
+                                effectively in a team-oriented environment.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="progrm">
+            <div class="program">
+                <br>
+                <p><strong>Programs/Trainings attended;</strong></p>
+                <div>
+                    <ul>
+                        <li>Alt School of Engineering Cloud Program</li>
+                        <li>AWS CLOUD BOOTCAMP by Andrew</li>
+                        <li>UDACITY ALX PROGRAM</li>
+                    </ul>
+                </div>
+                <p>Check out my projects and services I offer in my <a class="link" href="#projects">portfolio.</a></p>
+        </section>
+
+        </article>
+        <section class="exprt">
+            <h4>Top Expertise</h4>
+            <hr>
+            <br>
+            <br>
+            <div id="skills">
+                <br>
+                <ul>
+                    <li>Kubernetes</li>
+                    <li>AWS Cloud</li>
+                    <li>HTML/CSS</li>
+                    <li>Google Cloud</li>
+                </ul>
+                <ul>
+                    <li>Python</li>
+                    <li>Docker</li>
+                    <li>Ansible</li>
+                    <li>Terraform</li>
+                </ul>
+            </div>
+        </section>
+
+        <br>
+        <hr>
+
+        <section class="s1" id="projects">
+            <div class="main-container">
+                <br>
+
+                <h3 class="proj">Some of my Recent Projects</h3>
+                <br>
+                <div class="post-wrapper">
+
+                    <div class="post">
+                        <img class="thumbnail" src="images/terraform.png" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title"> Deployed a three teir architecture using terraform and ansible"</h6>
+                            <p class="post-intro">Built some infrastructures on AWS cloud using Terraform and manages
+                                the configuration of the infrastructures using Ansible</p>
+                            <a href="https://github.com/gladysgodwin/deploy-3-ec2-with-terraform-and-ansible"
+                                target="_blank">Check It Out on Github</a>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img class="thumbnail"
+                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--R7qhf9fM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wm1scy7tlgtk8r836h99.png"
+                            alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">Complete DevOps project</h6>
+                            <p class="post-intro">Full devOps Project(Fluxcd,Prometheus, Grafana, fluentd, Kubernetes
+                                and Docker) using sock-shop microservices app and my portfolio as app reference</p>
+                            <a href="https://github.com/gladysgodwin/flux-project" target="_blank">Check It
+                                Out</a>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img class="thumbnail" src="./images/ansible.jpg" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">Ansible and postgresSQL</h6>
+                            <p class="post-intro">Deployed a simple web app including installation of packages and
+                                dependencies, configured apache webserver, defining the configurations in an ansible
+                                playbook and deployed to at least one ansible slave. Wrote a bash script that would
+                                install and set up postgresql. The bash script ran on my ansible slaves using the
+                                ansible playbook.</p>
+                            <a href="https://github.com/gladysgodwin/Deploy-Laravel-Framework-and-Set-up-PostgresqlSQL-using-Ansible"
+                                target="_blank">Check It Out on my Github</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="s2" id="blog">
+            <div class="main-container">
+                <h3>Recent Blog Posts</h3>
+
+                <div class="post-wrapper">
+
+                    <div class="post">
+                        <img class="thumbnail" src="./images/laravel-featured.png" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">Laravel on AWS Debian</h6>
+                            <a href="https://mytechjourne.hashnode.dev/how-i-deployed-laravel-realworld-example-app-on-debian-11"
+                                target="_blank">Read on Hashnode</a> <br>
+
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img class="thumbnail"
+                            src="https://cdn.hashnode.com/res/hashnode/image/upload/v1673465809523/a6e1d209-d32f-4e50-a129-641462754591.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+                            alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">Two teir architecture with terraform</h6>
+                            <br>
+                            <a href="https://mytechjourne.hashnode.dev/how-i-deployed-a-two-tier-architecture-using-terraform"
+                                target="_blank">Read on Hashnode</a>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <section class="s2" id="contact">
+            <div class="main-container">
+                <a href=""></a>
+                <h3 style="text-align: left;">Get In Touch</h3>
+
+                <form id="contact" class="my-form" >
+
+                    <div class="alert">Thank you. I will get back to you.</div>
+                    <div class="form-control controller">
+                        <label>Name</label>
+                        <br>
+                        <input class="input-field" type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+                    </div>
+                    <br>
+                    <div class="form-control">
+                        <label>Email</label>
+                        <br>
+                        <input class="input-field" type="text" id="email" name="email" placeholder="Enter Your email" required>
+                    </div>
+                    <br>
+                    <div class="form-control">
+                        <label>Message</label>
+                        <br>
+                        <textarea class="input-field" id="message" name="message" placeholder="Enter Your Message" required></textarea>
+                    </div>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span id="modal-close" class="modal-close">&times;</span>
+              <p id="modal-message"></p>
+            </div>
+          </div>
+
+        <section class="s3">
+            <div class="main-container">
+                <h5>Connect with me via my social accounts</h5>
+                <div class="soc">
+                    <a href="https://www.twitter.com/gladysgodwin9" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.github.com/gladysgodwin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gladys-oviawe-a57594137/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/gladysgodwin" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-end">
+                <p>&copy; 2022, all rights reserved</p>
+            </div>
+        </footer>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

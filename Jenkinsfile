@@ -28,7 +28,7 @@ pipeline {
         stage("Test Backend") {
             steps {
                 script {
-                    dir('my-website-portfolio/backend') {
+                    dir('my-website-2023/backend') {
                         sh "npm run dev"
                     }
                 }
@@ -38,7 +38,7 @@ pipeline {
         stage("Test Frontend") {
             steps {
                 script {
-                    dir('my-website-portfolio/frontend') {
+                    dir('my-website-2023/frontend') {
                         sh "npm install"
                     }       
                 }
@@ -49,7 +49,7 @@ pipeline {
             steps {
                 container('docker') {
                     script {
-                        sh "docker build -t gladysgodwin/project-backend:2024 ./my-website-portfolio/backend"
+                        sh "docker build -t gladysgodwin/project-backend:2024 ./my-website-2023/backend"
                         sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}"
                         sh "docker push gladysgodwin/project-backend:2024"
 
@@ -61,7 +61,7 @@ pipeline {
             steps {
                 container('docker') {
                     script {
-                        sh "docker build -t gladysgodwin/project-frontend:2024 ./my-website-portfolio/frontend"
+                        sh "docker build -t gladysgodwin/project-frontend:2024 ./my-website-2023/frontend"
                         sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}"
                         sh "docker push gladysgodwin/project-frontend:2024"
 
