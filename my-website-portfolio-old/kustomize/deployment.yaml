@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-portfolio
+  template:
+    metadata:
+      labels:
+        app: my-portfolio
+    spec:
+      containers:
+      - name: frontend
+        image: gladysgodwin/portfolio_frontend:latest
+        ports:
+        - containerPort: 8090
+      - name: backend
+        image: gladysgodwin/portfolio_backend:latest
+        ports:
+        - containerPort: 9696
+      - name: database
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+        env:
+          - name: DB_URL
+            valueFrom:
+              configMapKeyRef:
+                name: postgres-configmap
+                key: postgres-url
+          - name: USER_NAME
+            valueFrom:
+              secretKeyRef:
+                name: postgres-secret
+                key: postgres_user
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: postgres-secret
+                key: postgres_password
+        volumeMounts:
+        - name: postgres-storage
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres-storage
+        emptyDir: {}

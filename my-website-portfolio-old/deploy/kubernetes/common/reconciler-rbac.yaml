@@ -1,0 +1,33 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: reconciler-role
+  namespace: my-website-portfolio
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: [""]
+  resources: ["services"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["apps"]
+  resources: ["statefulsets"]
+  verbs: ["get", "watch", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: reconciler-rolebinding
+  namespace: my-website-portfolio
+subjects:
+- kind: ServiceAccount
+  name: reconciler
+  namespace: my-website-portfolio
+roleRef:
+  kind: Role
+  name: reconciler-role
+  apiGroup: rbac.authorization.k8s.io
