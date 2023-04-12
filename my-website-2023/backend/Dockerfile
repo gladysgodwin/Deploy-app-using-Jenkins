@@ -16,5 +16,7 @@ COPY . .
 # Expose the port on which the application will run
 EXPOSE 3000
 
+RUN chmod +x ./node_modules/.bin/nodemon
+
 # Set the command to start the application
 CMD ["node", "app.js"]
