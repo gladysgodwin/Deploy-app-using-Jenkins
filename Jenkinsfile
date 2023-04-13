@@ -15,12 +15,12 @@ pipeline {
     }
 
     stages {
-        stage("Create EKS cluster") {
+        stage("destroy EKS cluster") {
             steps {
                 script {
                     dir('terraform') {
                         sh "terraform init"
-                        sh "terraform apply --auto-approve"
+                        sh "terraform destroy --auto-approve"
                     }
                 }
             }
@@ -46,7 +46,7 @@ pipeline {
                 }
             }
         }
-        */
+        
         stage("Build backend into a docker image") {
             steps {
                 container('docker') {
@@ -83,4 +83,6 @@ pipeline {
             }
         }
     }
+
 }
+*/
