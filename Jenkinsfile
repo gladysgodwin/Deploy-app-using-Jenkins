@@ -25,6 +25,8 @@ pipeline {
                 }
             }
         }
+
+    }
         /*
         stage("Test Backend") {
             steps {
